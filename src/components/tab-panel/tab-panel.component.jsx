@@ -123,7 +123,7 @@ export default function Experience() {
                 <Tab disableTouchRipple label="Item Three" {...a11yProps(2)} />
                 {/* <Tab disableTouchRipple label="Item Four" {...a11yProps(4)} /> */}
               </Tabs>
-              <TabPanel value={value} index={1}>
+              <TabPanel value={value} index={0}>
                 <Typography
                   sx={{
                     fontSize: {
@@ -187,7 +187,7 @@ export default function Experience() {
                   • Making websites (HTML,CSS,JavaScript)
                 </Typography>
               </TabPanel>
-              <TabPanel value={value} index={0}>
+              <TabPanel value={value} index={1}>
                 <Typography
                   sx={{
                     fontSize: {
