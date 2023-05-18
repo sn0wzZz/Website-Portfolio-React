@@ -16,8 +16,8 @@ export default function SkillCard({ skill }) {
           <Typography variant="body2">
           </Typography>
           <Typography variant="h5" component="div" sx={{display:'flex', justifyContent: 'center',fontSize: {
-                  lg: '1.5rem',
-                  md: '1.5rem',
+                  lg: '1rem',
+                  md: '1rem',
                   sm: '1rem',
                   xs: '1rem',
                 },}}>

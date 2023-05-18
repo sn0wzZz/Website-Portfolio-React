@@ -50,22 +50,22 @@ export default function Contact() {
       <Slide bottom>
         <Container
           id="contact"
-          maxWidth={'lg'}
+          maxWidth={'md'}
           sx={{
             textAlign: 'center',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            marginBlock: { lg: '10rem', md: '5rem', sm: '0' },
+            marginBlock: { lg: '5rem', md: '2.5rem', xs: '6rem' },
           }}
         >
           <Typography
             variant="h2"
             sx={{
               fontSize: {
-                lg: '5rem',
-                md: '4rem',
+                lg: '4rem',
+                md: '3rem',
                 sm: '3rem',
                 xs: '3rem',
               },
@@ -79,7 +79,7 @@ export default function Contact() {
             color={'primary.main'}
             sx={{
               fontSize: {
-                lg: '2rem',
+                lg: '1.5rem',
                 md: '1.5rem',
                 sm: '1.2rem',
                 xs: '1.2rem',
@@ -97,7 +97,7 @@ export default function Contact() {
           <MailButton
             sx={{
               fontSize: {
-                lg: '2rem',
+                lg: '1.5rem',
                 md: '1.75rem',
                 sm: '1.5rem',
                 xs: '1.5rem',

@@ -64,7 +64,7 @@ export default function Experience() {
         <Container
           fixed
           id="experience"
-          maxWidth={'lg'}
+          maxWidth={'md'}
           sx={{
             bgcolor: 'secondary.dark',
             borderRadius: '30px',
@@ -80,10 +80,10 @@ export default function Experience() {
               paddingTop="1.5rem"
               sx={{
                 fontSize: {
-                  lg: '5rem',
-                  md: '4rem',
-                  sm: '3rem',
-                  xs: '3rem',
+                  lg: '3.5rem',
+                  md: '2.75rem',
+                  sm: '2rem',
+                  xs: '2rem',
                 },
               }}
             >
@@ -94,7 +94,7 @@ export default function Experience() {
                 flexGrow: 1,
                 display: 'flex',
                 flexDirection: !smallScreen ? 'column' : 'row',
-                paddingBlock: '1rem',
+                paddingBlock: '.5rem',
                 width: 'auto',
                 color: 'white',
                 // justifyContent: 'center',
@@ -123,11 +123,11 @@ export default function Experience() {
                 <Tab disableTouchRipple label="Item Three" {...a11yProps(2)} />
                 {/* <Tab disableTouchRipple label="Item Four" {...a11yProps(4)} /> */}
               </Tabs>
-              <TabPanel value={value} index={0}>
+              <TabPanel value={value} index={1}>
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '3rem',
+                      lg: '2rem',
                       md: '2.2rem',
                       sm: '2rem',
                       xs: '1.5rem',
@@ -135,13 +135,13 @@ export default function Experience() {
                   }}
                   fontWeight="bold"
                 >
-                  Timag, Plovdiv — Designer/Developer
+                  DummyTab— Designer/Developer
                 </Typography>
                 <Typography
                   sx={{
                     opacity: '.8',
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.5rem',
                       xs: '1.5rem',
@@ -153,7 +153,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '2rem',
+                      lg: '1.5rem',
                       md: '1.5rem',
                       sm: '1.5rem',
                       xs: '1.5rem',
@@ -165,7 +165,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.2rem',
                       xs: '1.2rem',
@@ -177,7 +177,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.2rem',
                       xs: '1.2rem',
@@ -187,11 +187,11 @@ export default function Experience() {
                   • Making websites (HTML,CSS,JavaScript)
                 </Typography>
               </TabPanel>
-              <TabPanel value={value} index={1}>
+              <TabPanel value={value} index={0}>
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '3rem',
+                      lg: '2rem',
                       md: '2.2rem',
                       sm: '2rem',
                       xs: '1.5rem',
@@ -205,7 +205,7 @@ export default function Experience() {
                   sx={{
                     opacity: '.8',
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.5rem',
                       xs: '1.5rem',
@@ -217,7 +217,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '2rem',
+                      lg: '1.5rem',
                       md: '1.5rem',
                       sm: '1.5rem',
                       xs: '1.5rem',
@@ -229,7 +229,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.2rem',
                       xs: '1.2rem',
@@ -241,7 +241,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.2rem',
                       xs: '1.2rem',
@@ -255,7 +255,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '3rem',
+                      lg: '2rem',
                       md: '2.2rem',
                       sm: '2rem',
                       xs: '1.5rem',
@@ -263,13 +263,13 @@ export default function Experience() {
                   }}
                   fontWeight="bold"
                 >
-                  DummyTab — Designer/Developer
+                  Timag, Plovdiv — Designer/Developer
                 </Typography>
                 <Typography
                   sx={{
                     opacity: '.8',
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.5rem',
                       xs: '1.5rem',
@@ -281,7 +281,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '2rem',
+                      lg: '1.5rem',
                       md: '1.5rem',
                       sm: '1.5rem',
                       xs: '1.5rem',
@@ -293,7 +293,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.2rem',
                       xs: '1.2rem',
@@ -305,7 +305,7 @@ export default function Experience() {
                 <Typography
                   sx={{
                     fontSize: {
-                      lg: '1.5rem',
+                      lg: '1rem',
                       md: '1rem',
                       sm: '1.2rem',
                       xs: '1.2rem',

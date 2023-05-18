@@ -38,9 +38,9 @@ export default function CardContainer() {
       <Box paddingTop={'1rem'}>
         <Typography sx={{
                 fontSize: {
-                    lg: '4rem',
-                    md: '3rem',
-                    sm: '2.5rem',
+                    lg: '2.5rem',
+                    md: '2rem',
+                    sm: '1.5rem',
                     xs: '2rem',
                 }}}
                 fontWeight={'bold'} gutterBottom color={'white'}>

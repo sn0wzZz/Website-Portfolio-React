@@ -19,13 +19,13 @@ export default function About() {
       <Slide bottom>
         <Container
           id='about'
-          maxWidth={'lg'}
+          maxWidth={'md'}
           sx={{
             // bgcolor: 'background.main',
             border: '2px solid white',
             borderRadius: '30px',
-            marginBottom: { xs: '2rem', sm: '3rem', md: '4rem', lg: '10rem' },
-            padding: { xs: '2rem', sm: '3rem', md: '4rem', lg: '5rem' },
+            marginBottom: { xs: '2rem', sm: '3rem', md: '4rem', lg: '7rem' },
+            padding: { xs: '2rem', sm: '3rem', md: '3rem', lg: '3rem' },
             zIndex: '-9999999999',
           }}
         >
@@ -34,8 +34,8 @@ export default function About() {
               color={'white'}
               sx={{
                 fontSize: {
-                  lg: '2rem',
-                  md: '2rem',
+                  lg: '1.5rem',
+                  md: '1.5rem',
                   sm: '1.5rem',
                   xs: '1.2rem',
                 },
@@ -44,9 +44,9 @@ export default function About() {
               <Typography
                 sx={{
                   fontSize: {
-                    lg: '4rem',
-                    md: '3rem',
-                    sm: '2.5rem',
+                    lg: '2.5rem',
+                    md: '2rem',
+                    sm: '1.5rem',
                     xs: '2rem',
                   },
                 }}

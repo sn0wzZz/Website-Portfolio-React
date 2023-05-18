@@ -28,7 +28,7 @@ export default function ProjectCard({ projectData }) {
   const smallScreen = useMediaQuery('(min-width:540px)')
   return (
     <Container
-      maxWidth="xl"
+      maxWidth="lg"
       sx={{
         display: 'flex',
         justifyContent: midScreen
@@ -36,9 +36,9 @@ export default function ProjectCard({ projectData }) {
             ? 'flex-end'
             : 'flex-start'
           : 'center',
-        marginBlock: midScreen ? '15rem' : '2.5rem',
+        marginBlock: midScreen ? '12.5rem' : '2.5rem',
         ':nth-of-type(n)': {
-          marginBottom: midScreen ? '10rem' : '',
+          marginBottom: midScreen ? '7.5rem' : '',
         },
       }}
     >
@@ -87,7 +87,7 @@ export default function ProjectCard({ projectData }) {
           <Typography
             sx={{
               fontSize: {
-                lg: '3rem',
+                lg: '2.5rem',
                 md: '2.2rem',
                 sm: '2rem',
                 xs: '1.5rem',
@@ -102,7 +102,7 @@ export default function ProjectCard({ projectData }) {
           <Typography
             sx={{
               fontSize: {
-                lg: '1.5rem',
+                lg: '1.1rem',
                 md: '1rem',
                 sm: '1.2rem',
                 xs: '1.2rem',
@@ -125,7 +125,7 @@ export default function ProjectCard({ projectData }) {
           <Typography
             sx={{
               fontSize: {
-                lg: '1.2rem',
+                lg: '1rem',
                 md: '1rem',
                 sm: '1.2rem',
                 xs: '1rem',

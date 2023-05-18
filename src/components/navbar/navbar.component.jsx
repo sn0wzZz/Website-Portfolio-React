@@ -55,12 +55,12 @@ export default function Navbar(props) {
     cursor: pointer;
     padding: 0.3em 0.7em;
     border-radius: 30px;
-    border: 3px solid #fff;
+    border: 3px solid #d9d9d9;
     textDecoration: none;
 
     &:hover {
       color: #1f1f1f;
-      background-color: #fff;
+      background-color: #d9d9d9;
       opacity: 0.8;
       transition: color 500ms, background-color 500ms, opacity 500ms;
     }
@@ -107,7 +107,7 @@ export default function Navbar(props) {
           float: 'right',
           color: 'secondary.light',
           fontSize: '30px',
-          bgcolor: 'primary.main',
+          bgcolor: 'rgba(255,255,255,0.7)',
           margin: '.5rem 1rem 30% 1rem',
         }}
       >
@@ -138,7 +138,7 @@ export default function Navbar(props) {
                 <ListItemText
                   primary={item}
                   sx={{
-                    bgcolor: 'primary.main',
+                    bgcolor: 'rgba(255,255,255,0.7)',
                     padding: '.5em',
                     // marginBlock: 1,
                     borderRadius: 30,
@@ -164,10 +164,10 @@ export default function Navbar(props) {
               primary={'Resume'}
               sx={{
                 padding: '.5em',
-                color: 'white',
+                color: 'rgba(255,255,255,0.7)',
                 borderRadius: 30,
                 margin: 0,
-                border: '2px solid #d9d9d9',
+                border: '2px solid rgba(255,255,255,0.7)',
                 fontWeight: 'bold',
               }}
             />
@@ -191,7 +191,7 @@ export default function Navbar(props) {
           webkitBackdropFilter: 'blur(20px) saturate(180%)',
           borderBottom: { lg: 'none',md:'none',sm:'none',xs: '.5px solid grey',  },
           boxShadow: 'none',
-          height: { lg: '80px' },
+          height: { lg: '65px' },
           display: 'flex',
           alingItems: 'center',
         }}
@@ -220,7 +220,6 @@ export default function Navbar(props) {
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                fontSize: { xl: '1.3rem', lg: '1rem' },
               }}
             >
               {navItems.map((item) => (
@@ -258,7 +257,10 @@ export default function Navbar(props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              backgroundColor: 'background.default',
+              backgroundColor: 'transparent',
+              // backgroundColor: 'rgba(9,8,8,0.5)',
+              webkitBackdropFilter: 'saturate(180%) blur(20px)',
+              backdropFilter: 'saturate(180%) blur(20px)',
               borderRadius: '30px 0 0 30px',
               height: '100vh',
             },

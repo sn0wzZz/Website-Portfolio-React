@@ -37,7 +37,10 @@ const gradient = keyframes`
 export default function Header() {
   const smallScreen = useMediaQuery('(min-width: 764px)')
   return (
-    <HeaderBox paddingTop={!smallScreen ? '4rem' : 0} sx={{paddingTop:{md: 0, sm:0,xs:'4rem'}}}>
+    <HeaderBox
+      paddingTop={!smallScreen ? '1rem' : 0}
+      sx={{ paddingTop: { md: 0, sm: 0, xs: '4rem' } }}
+    >
       <Grid container spacing={0}>
         <Grid item xs={12} sm={6} lg={6} order={{ xs: 2, sm: 1, lg: 1 }}>
           <ContainerBox>
@@ -49,9 +52,9 @@ export default function Header() {
                     sm: '3rem',
                     md: '4rem',
                     lg: '5rem',
-                    xl: '6rem',
+                    xl: '5rem',
                   },
-                  lineHeight: {lg: '6rem', xs:'3.5rem'}
+                  lineHeight: { lg: '5rem', xs: '3.5rem' },
                 }}
                 color="white"
                 fontWeight={'bold'}
@@ -64,14 +67,15 @@ export default function Header() {
                     xs: '1.5rem',
                     sm: '1.5rem',
                     md: '2rem',
-                    lg: '2.5rem',
+                    lg: '2rem',
                     xl: '3rem',
-                    background: 'linear-gradient(45deg, #004bbc, #00e3bc)',
-                    backgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundSize: '150% 150%',
-                    animation: `${gradient} 3s linear infinite`,
                   },
+                  background: 'linear-gradient(45deg, #004bbc, #00e3bc)',
+                  backgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundSize: '150% 150%',
+                  animation: `${gradient} 3s linear infinite`,
+                  lineHeight: { lg: '4rem', xs: '3.5rem' },
                 }}
                 // color="grey"
               >
@@ -84,7 +88,7 @@ export default function Header() {
           <ContainerBox>
             <Box
               sx={{
-                width: !smallScreen ? '65%' : '100%',
+                width: !smallScreen ? '65%' : '60%',
                 position: 'relative',
                 display: 'flex',
                 justifyContent: 'center',

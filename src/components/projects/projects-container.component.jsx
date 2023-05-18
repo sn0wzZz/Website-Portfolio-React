@@ -95,16 +95,16 @@ export default function ProjectsContainer() {
           bgcolor={'background.default'}
           zIndex={-2}
         >
-          <Container maxWidth="xl">
+          <Container maxWidth="md">
             <Typography
               variant={'h2'}
               color={'primary'}
               sx={{
-                paddingTop: '7rem',
+                paddingTop: smallScreen? '7rem': '3rem',
                 fontWeight: 'bold',
                 fontSize: {
-                  lg: '5rem',
-                  md: '4rem',
+                  lg: '4rem',
+                  md: '3rem',
                   sm: '3rem',
                   xs: '3rem',
                 },
@@ -117,15 +117,15 @@ export default function ProjectsContainer() {
             return <ProjectCard key={project.id} projectData={project} />
           })}
           <Container
-            maxWidth="xl"
+            maxWidth="lg"
             sx={{ display: 'flex', justifyContent: 'center' }}
           >
             <MoreButton
               href="https://github.com/sn0wzZz"
               sx={{
                 fontSize: {
-                  lg: '2rem',
-                  md: '1.75rem',
+                  lg: '1.5rem',
+                  md: '1.5rem',
                   sm: '1.5rem',
                   xs: '1.5rem',
                 },
