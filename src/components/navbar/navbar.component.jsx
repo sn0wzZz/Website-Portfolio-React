@@ -8,6 +8,7 @@ import CloseIcon from '@mui/icons-material/Close'
 import styled from '@emotion/styled'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import Resume from '../../assets/Martin_Stanchev_Resume.pdf'
+import Logo from '../../assets/logo.png'
 
 const drawerWidth = 240
 const navItems = ['About', 'Experience', 'Work', 'Contact']
@@ -197,7 +198,7 @@ export default function Navbar(props) {
       >
         <Toolbar sx={{ height: '100%', marginInline: { sm: 0, lg: '10%' } }}>
           <MenuLogoButton>
-            <img src="./src/assets/logo.png" alt="logo" />
+            <img src={Logo} alt="logo" />
           </MenuLogoButton>
           <IconButton
             color="primary"

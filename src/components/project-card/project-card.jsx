@@ -48,7 +48,7 @@ export default function ProjectCard({ projectData }) {
           width: midScreen ? '60%' : '100%',
           background: midScreen
             ? color
-            : `linear-gradient(rgba(${gradient},0.9), rgba(${gradient},0.9)), url('./src/assets/${img}')`,
+            : `linear-gradient(rgba(${gradient},0.9), rgba(${gradient},0.9)), url(${img})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           borderRadius: '30px',

@@ -6,6 +6,9 @@ import styled from '@emotion/styled'
 import ProjectCard from '../project-card/project-card'
 import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
+import png1 from '../../assets/site.png'
+import png2 from '../../assets/mapi.png'
+import png3 from '../../assets/crud.png'
 
 // title description color gradient technologies linklive linkgit
 
@@ -43,7 +46,7 @@ const projects = [
     title: 'TMDB Application',
     description:
       'A project I recently built for an interview. It accepts a file which contains a list of movie titles separated by commas. The application allows you to select titles from the imported list, after that it fetches information for them and then it renders cards which show the information.',
-    img: 'site.png',
+    img: png1,
     color: 'darkcyan',
     gradient: '12,140,150',
     technologies: ['React', 'Material UI', 'Axios'],
@@ -55,7 +58,7 @@ const projects = [
     title: 'Mapi',
     description:
       'A simple mobile application which allows you to save and navigate to GPS coordinates in a database. I built this one for a university course and it taught me a few things about creating native apps.',
-    img: 'mapi.png',
+    img: png2,
     color: '#1f1f1f',
     gradient: '58, 131, 151',
     technologies: ['React Native', 'SQLite', 'Expo'],
@@ -67,7 +70,7 @@ const projects = [
     title: 'GuitarDB',
     description:
       'A CRUD application I built for another course I had at university. It allows you to perform CRUD operations on a guitar database. This one aquainted me with Express and I learned a lot about backend developement.',
-    img: 'crud.png',
+    img: png3,
     color: '#0d1a35',
     gradient: '13, 26, 53',
     technologies: ['Node.js','Express','Axios','MongoDB'],

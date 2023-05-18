@@ -3,6 +3,7 @@ import { Box, Container, keyframes } from '@mui/system'
 import styled from '@emotion/styled'
 import { Typography, useMediaQuery } from '@mui/material'
 import Grid from '@mui/material/Grid' // Grid version 1
+import Logo from '../../assets/logo.png'
 
 const HeaderBox = styled(Box)`
 max-width: 100%;
@@ -89,9 +90,9 @@ export default function Header() {
                 justifyContent: 'center',
               }}
             >
-              <img src="./src/assets/logo.png" alt="logo" />
+              <img src={Logo} alt="logo" />
               <img
-                src="./src/assets/logo.png"
+                src={Logo}
                 alt="logo"
                 style={{
                   position: 'absolute',
