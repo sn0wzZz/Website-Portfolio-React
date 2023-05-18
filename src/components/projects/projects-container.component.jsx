@@ -95,7 +95,7 @@ export default function ProjectsContainer() {
           bgcolor={'background.default'}
           zIndex={-2}
         >
-          <Container maxWidth="md">
+          <Container maxWidth="lg">
             <Typography
               variant={'h2'}
               color={'primary'}
