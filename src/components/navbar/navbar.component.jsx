@@ -27,7 +27,7 @@ export default function Navbar(props) {
     border: none;
     font-weight: bold;
     // font-size: 1.2rem;
-    margin-inline: 0.7rem;
+    margin-right: 0.7rem;
     cursor: pointer;
     padding: 0.5em 0.7em;
     border-radius: 30px;
