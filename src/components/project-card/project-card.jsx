@@ -68,7 +68,7 @@ export default function ProjectCard({ projectData }) {
             zIndex: -1,
             transform:
               id % 2 ? 'translate(-70%, -22%)' : 'translate(63%, -22%)',
-            backgroundImage: `linear-gradient(rgba(${gradient},0.2), rgba(${gradient},0.2)), url('./src/assets/${img}')`,
+            backgroundImage: `linear-gradient(rgba(${gradient},0.2), rgba(${gradient},0.2)), url(${img})`,
             backgroundSize: 'cover',
             borderRadius: '30px',
             // cursor: 'pointer',
