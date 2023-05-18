@@ -1,4 +1,4 @@
-# Vite.js example
+# Portfolio Website | Vite.js
 
 ## How to use
 
