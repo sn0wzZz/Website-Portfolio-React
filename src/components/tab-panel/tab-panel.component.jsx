@@ -77,7 +77,7 @@ export default function Experience() {
               variant="h2"
               fontWeight={'bold'}
               color={'white'}
-              paddingTop="1.5rem"
+              paddingBlock="1.5rem .5rem"
               sx={{
                 fontSize: {
                   lg: '3.5rem',
@@ -144,7 +144,7 @@ export default function Experience() {
                       lg: '1rem',
                       md: '1rem',
                       sm: '1.5rem',
-                      xs: '1.5rem',
+                      xs: '1.2rem',
                     },
                   }}
                 >
@@ -208,7 +208,7 @@ export default function Experience() {
                       lg: '1rem',
                       md: '1rem',
                       sm: '1.5rem',
-                      xs: '1.5rem',
+                      xs: '1.2rem',
                     },
                   }}
                 >
@@ -272,7 +272,7 @@ export default function Experience() {
                       lg: '1rem',
                       md: '1rem',
                       sm: '1.5rem',
-                      xs: '1.5rem',
+                      xs: '1.2rem',
                     },
                   }}
                 >
