@@ -135,7 +135,7 @@ export default function Experience() {
                   }}
                   fontWeight="bold"
                 >
-                  DummyTab— Designer/Developer
+                  Timag, Plovdiv — Designer/Developer
                 </Typography>
                 <Typography
                   sx={{
@@ -263,7 +263,7 @@ export default function Experience() {
                   }}
                   fontWeight="bold"
                 >
-                  Timag, Plovdiv — Designer/Developer
+                  DummyTab — Designer/Developer
                 </Typography>
                 <Typography
                   sx={{
