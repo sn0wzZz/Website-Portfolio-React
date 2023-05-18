@@ -75,7 +75,7 @@ export default function Header() {
                   WebkitTextFillColor: 'transparent',
                   backgroundSize: '150% 150%',
                   animation: `${gradient} 3s linear infinite`,
-                  lineHeight: { lg: '4rem', xs: '3.5rem' },
+                  lineHeight: { lg: '4rem', xs: '2.25rem' },
                 }}
                 // color="grey"
               >
