@@ -1,0 +1,110 @@
+import React from 'react'
+import { Box, Container, keyframes } from '@mui/system'
+import styled from '@emotion/styled'
+import { Typography, useMediaQuery } from '@mui/material'
+import Grid from '@mui/material/Grid' // Grid version 1
+
+const HeaderBox = styled(Box)`
+max-width: 100%;
+display: flex;
+justify-content: space-evenly;
+margin-block: 10vw;
+max-height 100vh;
+`
+const ContainerBox = styled(Box)`
+  max-width: 100%;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+`
+
+const gradient = keyframes`
+0% {
+    background-position: 0 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0 50%;
+}
+`
+
+export default function Header() {
+  const smallScreen = useMediaQuery('(min-width: 764px)')
+  return (
+    <HeaderBox paddingTop={!smallScreen ? '4rem' : 0} sx={{paddingTop:{md: 0, sm:0,xs:'4rem'}}}>
+      <Grid container spacing={0}>
+        <Grid item xs={12} sm={6} lg={6} order={{ xs: 2, sm: 1, lg: 1 }}>
+          <ContainerBox>
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '3rem',
+                    sm: '3rem',
+                    md: '4rem',
+                    lg: '5rem',
+                    xl: '6rem',
+                  },
+                  lineHeight: {lg: '6rem', xs:'3.5rem'}
+                }}
+                color="white"
+                fontWeight={'bold'}
+              >
+                Hi, I'm Martin Stanchev
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: '1.5rem',
+                    sm: '1.5rem',
+                    md: '2rem',
+                    lg: '2.5rem',
+                    xl: '3rem',
+                    background: 'linear-gradient(45deg, #004bbc, #00e3bc)',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundSize: '150% 150%',
+                    animation: `${gradient} 3s linear infinite`,
+                  },
+                }}
+                // color="grey"
+              >
+                UX/UI DESIGNER AND DEVELOPER
+              </Typography>
+            </Box>
+          </ContainerBox>
+        </Grid>
+        <Grid item xs={12} sm={6} lg={6} order={{ sx: 1, sm: 1, lg: 2 }}>
+          <ContainerBox>
+            <Box
+              sx={{
+                width: !smallScreen ? '65%' : '100%',
+                position: 'relative',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <img src="./src/assets/logo.png" alt="logo" />
+              <img
+                src="./src/assets/logo.png"
+                alt="logo"
+                style={{
+                  position: 'absolute',
+                  zIndex: -99,
+                  filter: !smallScreen
+                    ? 'blur(5rem) saturate(250%)'
+                    : 'blur(9rem) saturate(250%)',
+                }}
+              />
+            </Box>
+          </ContainerBox>
+        </Grid>
+      </Grid>
+    </HeaderBox>
+  )
+}
