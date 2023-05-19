@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { Typography, useMediaQuery } from '@mui/material'
 import Grid from '@mui/material/Grid' // Grid version 1
 import Logo from '../../assets/logo.png'
+import LogoBig from '../../assets/logoBig.png'
 
 const HeaderBox = styled(Box)`
 max-width: 100%;
@@ -94,7 +95,7 @@ export default function Header() {
                 justifyContent: 'center',
               }}
             >
-              <img src={Logo} alt="logo" />
+              <img src={LogoBig} alt="logo" />
               <img
                 src={Logo}
                 alt="logo"
