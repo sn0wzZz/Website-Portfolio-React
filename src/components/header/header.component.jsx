@@ -97,7 +97,7 @@ export default function Header() {
             >
               <img src={LogoBig} alt="logo" />
               <img
-                src={Logo}
+                src={LogoBig}
                 alt="logo"
                 style={{
                   position: 'absolute',
