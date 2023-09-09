@@ -1,16 +1,15 @@
-import { Typography } from '@mui/material'
-import { Container } from '@mui/system'
-import React from 'react'
+import { useState } from 'react'
+
+import { Container, Typography, Link, css } from '@mui/material'
 import styled from '@emotion/styled'
 import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
-import { useState } from 'react'
-import { Link } from '@mui/material'
+
 
 const MailButton = styled(Link)(
-  ({ theme }) => `
+  ({ theme }) => css`
     background: transparent;
-    color: #d9d9d9;
+    color: ${theme.palette.primary.main};
     border: none;
     font-weight: bold;
     // margin-inline: 0.7rem;
@@ -23,7 +22,7 @@ const MailButton = styled(Link)(
     text-decoration: none;
 
     &:hover {
-      color: #1f1f1f;
+      color: ${theme.palette.background.default};
       background-color: #fff;
       box-shadow: cyan 0 0 40px;
       transform: translateY(-10%);

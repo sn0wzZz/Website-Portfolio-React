@@ -1,10 +1,23 @@
-import React from 'react'
-import { Container, Box } from '@mui/material'
-import Typography from '@mui/material/Typography'
-import VizSensor from 'react-visibility-sensor'
+
 import { useState } from 'react'
+import { skills } from '../../data/data'
+
+import VizSensor from 'react-visibility-sensor'
+import Grid2 from '@mui/material/Unstable_Grid2' // Grid version 2
+import { Container, Box, Typography } from '@mui/material'
 import { Slide } from 'react-reveal'
-import CardContainer from '../skill-card-container/skill-card-container.component'
+
+import Technology from './Technology'
+
+export const headingFontStyle = {
+  fontSize: {
+    lg: '2.5rem',
+    md: '2rem',
+    sm: '1.5rem',
+    xs: '2rem',
+  },
+  fontWeight: 'bold',
+}
 
 export default function About() {
   const [active, setActive] = useState(false)
@@ -15,7 +28,7 @@ export default function About() {
       offset={{ top: 1 }}
       minTopValue={1}
       onChange={(isVisible) => setActive(isVisible)}
-      >
+    >
       <Slide bottom>
         <Container
           id='about'
@@ -29,9 +42,12 @@ export default function About() {
             zIndex: '-9999999999',
           }}
         >
-          <Box>
+          <Box color={'primary.white'}>
+            <Typography sx={headingFontStyle} paddingBlock='1.5rem'>
+              About Me
+            </Typography>
+
             <Typography
-              color={'white'}
               sx={{
                 fontSize: {
                   lg: '1.5rem',
@@ -41,26 +57,25 @@ export default function About() {
                 },
               }}
             >
-              <Typography
-                sx={{
-                  fontSize: {
-                    lg: '2.5rem',
-                    md: '2rem',
-                    sm: '1.5rem',
-                    xs: '2rem',
-                  },
-                }}
-                fontWeight={'bold'}
-                paddingBlock="1.5rem"
-              >
-                About Me
-              </Typography>
               Hi, my name is Martin. I design and develop stunning digital
               experiences which live on the web. My hobby to play around with
               CSS and HTML quickly turned into a passoin! Now I always try to
               make the next project I'm working on better than the one before!
             </Typography>
-            <CardContainer />
+          </Box>
+          <Box paddingTop={'1rem'}>
+            <Typography sx={headingFontStyle} gutterBottom color={'white'}>
+              What I use
+            </Typography>
+            <Grid2
+              container
+              rowSpacing={2}
+              columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 2 }}
+            >
+              {skills.map((skill, i) => {
+                return <Technology skill={skill} key={skill.technology} i={i} />
+              })}
+            </Grid2>
           </Box>
         </Container>
       </Slide>

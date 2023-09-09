@@ -7,9 +7,11 @@ let theme = createTheme({
   palette: {
     primary: {
       main: '#d9d9d9',
+      white: '#fff',
     },
     secondary: {
       main: '#00a3bc',
+      shadow: 'rgba(0, 163, 188, .75)',
       dark: '#007689',
       darker: '#00606f',
     },

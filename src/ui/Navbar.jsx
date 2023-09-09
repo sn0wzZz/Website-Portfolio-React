@@ -1,4 +1,4 @@
-import * as React from 'react'
+import {useState} from 'react'
 //prettier-ignore
 import { List,ListItem,IconButton,ListItemButton,ListItemText,
           Drawer,CssBaseline,Box,AppBar,Toolbar,Link as Lnk,} from '@mui/material'
@@ -7,21 +7,20 @@ import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import styled from '@emotion/styled'
 import { Link, animateScroll as scroll } from 'react-scroll'
-import Resume from '../../assets/Martin_Stanchev_Resume.pdf'
-import Logo from '../../assets/logo.png'
+import Resume from '../assets/Martin_Stanchev_Resume.pdf'
+import Logo from '../assets/logo.png'
 
 const drawerWidth = 240
 const navItems = ['About', 'Experience', 'Work', 'Contact']
 
-export default function Navbar(props) {
-  const { window } = props
-  const [mobileOpen, setMobileOpen] = React.useState(false)
+export default function Navbar({window}) {
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
   }
 
-  const MenuButton = styled(Lnk)`
+  const MenuButton = styled.p`
     background: transparent;
     color: #d9d9d9;
     border: none;
@@ -31,7 +30,7 @@ export default function Navbar(props) {
     cursor: pointer;
     padding: 0.5em 0.7em;
     border-radius: 30px;
-    textdecoration: none;
+    text-decoration: none;
 
     &:hover {
       color: #1f1f1f;
@@ -44,7 +43,7 @@ export default function Navbar(props) {
       transition: color 500ms, background 500ms, opacity 500ms;
     }
   `
-  const ResumeButton = styled(Lnk)(
+  const ResumeButton = styled.p(
     ({ theme }) => `
     background: transparent;
     color: #d9d9d9;

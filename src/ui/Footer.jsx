@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Box} from '@mui/system'
+import { useState } from 'react'
 import { Container, Typography } from '@mui/material'
 
 export default function Footer() {
@@ -13,7 +12,7 @@ export default function Footer() {
   }
 
   return (
-    <Container maxWidth='xl' height={'100px'} sx={{textAlign: 'center', bgcolor: 'background.default'}}>
+    <Container component='footer' maxWidth='xl' height={'100px'} sx={{textAlign: 'center', bgcolor: 'background.default'}}>
       <Typography onClick={handleClick} color={'secondary.light'} padding={2} fontWeight={'bold'}>
         {message}
       </Typography>

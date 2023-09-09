@@ -1,17 +1,16 @@
 import React from 'react'
-import { Box, Container, keyframes } from '@mui/system'
+import { Box, keyframes} from '@mui/system'
 import styled from '@emotion/styled'
 import { Typography, useMediaQuery } from '@mui/material'
 import Grid from '@mui/material/Grid' // Grid version 1
-import Logo from '../../assets/logo.png'
-import LogoBig from '../../assets/logoBig.png'
+import LogoBig from '../assets/logoBig.png'
 
 const HeaderBox = styled(Box)`
 max-width: 100%;
 display: flex;
 justify-content: space-evenly;
 margin-block: 10vw;
-max-height 100vh;
+max-height: 100vh;
 `
 const ContainerBox = styled(Box)`
   max-width: 100%;

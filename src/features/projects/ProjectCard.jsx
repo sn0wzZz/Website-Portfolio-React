@@ -1,4 +1,3 @@
-import React from 'react'
 //prettier-ignore
 import {Container, Box, Button, IconButton,Typography, useMediaQuery, Link} from '@mui/material'
 import LaunchIcon from '@mui/icons-material/Launch'
@@ -7,9 +6,29 @@ import styled from '@emotion/styled'
 
 const IcoBtn = styled(IconButton)`
   color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s, border 0.3s;
   :hover {
     color: white;
   }
+`
+
+const Image = styled(Box)`
+  position: absolute;
+  width: 70vw;
+  height: 60vw;
+  max-width: 100%;
+  max-height: 150%;
+  z-index: -1;
+  background-size: cover;
+  border-radius: 30px;
+`
+
+const Card = styled(Box)`
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  position: relative;
+  box-shadow: 0px 10px 40px;
 `
 
 export default function ProjectCard({ projectData }) {
@@ -28,7 +47,7 @@ export default function ProjectCard({ projectData }) {
   const smallScreen = useMediaQuery('(min-width:540px)')
   return (
     <Container
-      maxWidth="lg"
+      maxWidth='lg'
       sx={{
         display: 'flex',
         justifyContent: midScreen
@@ -42,46 +61,23 @@ export default function ProjectCard({ projectData }) {
         },
       }}
     >
-      <Box
+      <Card
         sx={{
-          // height: 400,
           width: midScreen ? '60%' : '100%',
+          padding: midScreen ? '2rem' : '1.5rem',
           background: midScreen
             ? color
             : `linear-gradient(rgba(${gradient},0.9), rgba(${gradient},0.9)), url(${img})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          borderRadius: '30px',
-          position: 'relative',
-          p: 3,
-          boxShadow: '0px 10px 40px',
         }}
       >
-        <Box
+        <Image
           sx={{
-            position: 'absolute',
             display: midScreen ? 'block' : 'none',
-            width: '70vw',
-            height: '60vw',
-            maxWidth: '100%',
-            maxHeight: '150%',
-            zIndex: -1,
             transform:
               id % 2 ? 'translate(-70%, -22%)' : 'translate(63%, -22%)',
             backgroundImage: `linear-gradient(rgba(${gradient},0.2), rgba(${gradient},0.2)), url(${img})`,
-            backgroundSize: 'cover',
-            borderRadius: '30px',
-            // cursor: 'pointer',
-            // ':hover': {
-            //   backgroundImage: `linear-gradient(transparent, transparent), url('./src/assets/${img}')`,
-            //   transition: 'backgroundImage 200ms',
-            // },
-            // ':not(:hover)': {
-            //   backgroundImage: `linear-gradient(rgba(${gradient},0.2), rgba(${gradient},0.2)), url('./src/assets/${img}')`,
-            //   transition: 'backgroundImage 200ms',
-            // },
           }}
-        ></Box>
+        />
 
         <Box color={'primary.main'}>
           <Typography
@@ -108,7 +104,7 @@ export default function ProjectCard({ projectData }) {
                 xs: '1.2rem',
               },
             }}
-            fontWeight="bold"
+            fontWeight='bold'
           >
             {description}
           </Typography>
@@ -131,11 +127,12 @@ export default function ProjectCard({ projectData }) {
                 xs: '1rem',
               },
             }}
-            color="black"
+            color='black'
           >
-            {technologies.map((technology) => {
+            {technologies.map((technology, i) => {
               return (
                 <span
+                  key={i}
                   style={{
                     marginRight: '.5rem',
                     marginBottom: '.5rem',
@@ -160,27 +157,25 @@ export default function ProjectCard({ projectData }) {
           >
             <IcoBtn
               href={linkGit}
-              target="_blank"
+              target='_blank'
               disableRipple
               disableTouchRipple
             >
-              <GitHubIcon fontSize="large" />
+              <GitHubIcon fontSize='large' />
             </IcoBtn>
-            {linkLive ? (
+            {linkLive && (
               <IcoBtn
                 href={linkLive}
-                target="_blank"
+                target='_blank'
                 disableRipple
                 disableTouchRipple
               >
-                <LaunchIcon fontSize="large" sx={{ marginLeft: '1rem' }} />
+                <LaunchIcon fontSize='large' sx={{ marginLeft: '1rem' }} />
               </IcoBtn>
-            ) : (
-              ''
             )}
           </Box>
         </Box>
-      </Box>
+      </Card>
     </Container>
   )
 }
