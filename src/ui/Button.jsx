@@ -4,13 +4,12 @@ import theme from '../theme'
 
 const styles = {
   menu: ' margin-right: 0.7rem;',
-  resume: ` 
-  border: 3px solid ${theme.palette.primary.main};`,
+  resume: ` border: 3px solid ${theme.palette.primary.main};`,
 
   git: ` border: 3px solid ${theme.palette.primary.main}; 
   margin-bottom: 4rem;  
   margin-top: 2rem;`,
-  mail: `border: 3px solid ${theme.palette.primary.main}; 
+  mail: ` border: 3px solid ${theme.palette.primary.main}; 
     margin-bottom: 4rem; 
     &:hover{ 
       box-shadow: cyan 0 0 40px;

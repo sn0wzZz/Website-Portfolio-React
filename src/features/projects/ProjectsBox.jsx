@@ -12,33 +12,6 @@ import StyledButton from '../../ui/Button'
 
 // title description color gradient technologies linklive linkgit
 
-const MoreButton = styled(Link)(
-  ({ theme }) => css`
-    background: transparent;
-    color: ${theme.palette.primary.main};
-    border: none;
-    font-weight: bold;
-    // margin-inline: 0.7rem;
-    cursor: pointer;
-    padding: 0.5em 0.7em;
-    border-radius: 2em;
-    border: 3px solid #fff;
-    /* font-size: 2rem; */
-    margin-bottom: 4rem;
-    text-decoration: none;
-
-    &:hover {
-      color: ${theme.palette.background.default};
-      background-color: ${theme.palette.primary.main};
-      opacity: 0.8;
-      transition: color 500ms, background-color 500ms, opacity 500ms;
-    }
-    &:not(:hover) {
-      color: #d9d9d9;
-      transition: color 500ms, background 500ms, opacity 500ms;
-    }
-  `
-)
 
 export default function ProjectsBox() {
   const midScreen = useMediaQuery('(min-width:840px)')

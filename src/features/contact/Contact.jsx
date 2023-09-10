@@ -7,35 +7,6 @@ import { Slide } from 'react-reveal'
 import StyledButton from '../../ui/Button'
 
 
-const MailButton = styled(Link)(
-  ({ theme }) => css`
-    background: transparent;
-    color: ${theme.palette.primary.main};
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 0.5em 0.7em;
-    border-radius: 2em;
-    border: 3px solid #fff;
-    margin-bottom: 4rem;
-    text-decoration: none;
-
-    &:hover {
-      color: ${theme.palette.background.default};
-      background-color: #fff;
-      box-shadow: cyan 0 0 40px;
-      transform: translateY(-10%);
-      opacity: 0.8;
-      transition: all 500ms;
-    }
-
-    &:not(:hover) {
-      color: #d9d9d9;
-      transition: all 500ms;
-    }
-  `
-)
-
 export default function Contact() {
   const [active, setActive] = useState(false)
   return (
