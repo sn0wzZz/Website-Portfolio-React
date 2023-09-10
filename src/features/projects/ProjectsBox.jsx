@@ -10,8 +10,6 @@ import ProjectCard from './ProjectCard'
 import { projects } from '../../data/data'
 import StyledButton from '../../ui/Button'
 
-// title description color gradient technologies linklive linkgit
-
 
 export default function ProjectsBox() {
   const midScreen = useMediaQuery('(min-width:840px)')
