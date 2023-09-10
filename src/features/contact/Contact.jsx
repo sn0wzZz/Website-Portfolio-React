@@ -4,6 +4,7 @@ import { Container, Typography, Link, css } from '@mui/material'
 import styled from '@emotion/styled'
 import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
+import StyledButton from '../../ui/Button'
 
 
 const MailButton = styled(Link)(
@@ -12,12 +13,10 @@ const MailButton = styled(Link)(
     color: ${theme.palette.primary.main};
     border: none;
     font-weight: bold;
-    // margin-inline: 0.7rem;
     cursor: pointer;
     padding: 0.5em 0.7em;
     border-radius: 2em;
     border: 3px solid #fff;
-    // font-size: 2rem;
     margin-bottom: 4rem;
     text-decoration: none;
 
@@ -27,12 +26,12 @@ const MailButton = styled(Link)(
       box-shadow: cyan 0 0 40px;
       transform: translateY(-10%);
       opacity: 0.8;
-      transition: color 500ms, background-color 500ms, opacity 500ms, transform 500ms, box-shadow 500ms;
+      transition: all 500ms;
     }
 
     &:not(:hover) {
       color: #d9d9d9;
-      transition: color 500ms, background 500ms, opacity 500ms, transform 500ms, box-shadow 500ms;
+      transition: all 500ms;
     }
   `
 )
@@ -48,7 +47,7 @@ export default function Contact() {
     >
       <Slide bottom>
         <Container
-          id="contact"
+          id='contact'
           maxWidth={'md'}
           sx={{
             textAlign: 'center',
@@ -57,10 +56,11 @@ export default function Contact() {
             justifyContent: 'center',
             alignItems: 'center',
             marginBlock: { lg: '5rem', md: '2.5rem', xs: '6rem' },
+            bgcolor: 'background.default',
           }}
         >
           <Typography
-            variant="h2"
+            variant='h2'
             sx={{
               fontSize: {
                 lg: '4rem',
@@ -87,13 +87,14 @@ export default function Contact() {
               marginTop: '1rem',
               marginBottom: '5rem',
             }}
-            paddingBlock="1.5rem"
+            paddingBlock='1.5rem'
           >
             I'm always looking forward to hearing from you about any projects
             you may have in mind so don't hesitate to get in touch with me. I'll
             try to get back at you as quickly as I can!
           </Typography>
-          <MailButton
+          <StyledButton
+          type='mail'
             sx={{
               fontSize: {
                 lg: '1.5rem',
@@ -102,11 +103,9 @@ export default function Contact() {
                 xs: '1.5rem',
               },
             }}
-            href="mailto:sn0wzzz.dev@gmail.com"
-            underline="none"
-          >
-            Say Hello
-          </MailButton>
+            href='mailto:sn0wzzz.dev@gmail.com'
+            underline='none'
+          >Say hello</StyledButton>
         </Container>
       </Slide>
     </VizSensor>

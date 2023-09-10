@@ -8,27 +8,32 @@ export default function Technology({ skill, i }) {
   return (
     <Grid2 xs={6} sm={6} md={4} lg={3}>
       <Card
-        key={skill.technology}
         variant='outlined'
-        sx={{ borderRadius: 7, color: 'Black', backgroundColor: 'primary' }}
+        component={'div'}
+        sx={{ borderRadius: 7, color: 'Black', backgroundColor: 'primary',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignSelf: 'center',}}
       >
         <CardContent>
           <Typography
             variant='body'
             component='div'
             sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
+              
               fontSize: {
                 lg: '3rem',
                 md: '3rem',
                 sm: '3rem',
                 xs: '3rem',
               },
+              filter: `drop-shadow(0px 0px 20px ${color})`,
             }}
           >
-            <Icon color={color} />
+            <Icon
+              color={color}
+            />
           </Typography>
         </CardContent>
       </Card>

@@ -1,75 +1,27 @@
-import {useState} from 'react'
+import { useState } from 'react'
 //prettier-ignore
 import { List,ListItem,IconButton,ListItemButton,ListItemText,
-          Drawer,CssBaseline,Box,AppBar,Toolbar,Link as Lnk,} from '@mui/material'
+          Drawer,CssBaseline,Box,AppBar,Toolbar, css } from '@mui/material'
 import ButtonUnstyled from '@mui/base/ButtonUnstyled'
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import styled from '@emotion/styled'
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 import Resume from '../assets/Martin_Stanchev_Resume.pdf'
 import Logo from '../assets/logo.png'
+import StyledButton from './Button'
 
 const drawerWidth = 240
 const navItems = ['About', 'Experience', 'Work', 'Contact']
 
-export default function Navbar({window}) {
+export default function Navbar({ window }) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState)
   }
 
-  const MenuButton = styled.p`
-    background: transparent;
-    color: #d9d9d9;
-    border: none;
-    font-weight: bold;
-    // font-size: 1.2rem;
-    margin-right: 0.7rem;
-    cursor: pointer;
-    padding: 0.5em 0.7em;
-    border-radius: 30px;
-    text-decoration: none;
-
-    &:hover {
-      color: #1f1f1f;
-      background-color: white;
-      opacity: 0.8;
-      transition: color 500ms, background-color 500ms, opacity 500ms;
-    }
-    &:not(:hover) {
-      color: #d9d9d9;
-      transition: color 500ms, background 500ms, opacity 500ms;
-    }
-  `
-  const ResumeButton = styled.p(
-    ({ theme }) => `
-    background: transparent;
-    color: #d9d9d9;
-    border: none;
-    font-weight: bold;
-    // font-size: 1.2rem;
-    margin-inline: 0.01rem;
-    cursor: pointer;
-    padding: 0.3em 0.7em;
-    border-radius: 30px;
-    border: 3px solid #d9d9d9;
-    textDecoration: none;
-
-    &:hover {
-      color: #1f1f1f;
-      background-color: #d9d9d9;
-      opacity: 0.8;
-      transition: color 500ms, background-color 500ms, opacity 500ms;
-    }
-    &:not(:hover) {
-      color: #d9d9d9;
-      transition: color 500ms, background 500ms, opacity 500ms;
-    }
-  `
-  )
-
+  
   const MenuLogoButton = styled(ButtonUnstyled)`
     background: transparent;
     border: none;
@@ -116,7 +68,7 @@ export default function Navbar({window}) {
         {navItems.map((item) => (
           <ListItem key={item}>
             <Link
-              activeClass="active"
+              activeClass='active'
               to={`${item.toLocaleLowerCase()}`}
               spy={true}
               smooth={true}
@@ -183,12 +135,17 @@ export default function Navbar({window}) {
     <Box>
       <CssBaseline />
       <AppBar
-        component="nav"
+        component='nav'
         sx={{
           bgcolor: 'transparent',
           backdropFilter: 'blur(20px) saturate(180%)',
           webkitBackdropFilter: 'blur(20px) saturate(180%)',
-          borderBottom: { lg: 'none',md:'none',sm:'none',xs: '.5px solid grey',  },
+          borderBottom: {
+            lg: 'none',
+            md: 'none',
+            sm: 'none',
+            xs: '.5px solid grey',
+          },
           boxShadow: 'none',
           height: { lg: '65px' },
           display: 'flex',
@@ -197,12 +154,12 @@ export default function Navbar({window}) {
       >
         <Toolbar sx={{ height: '100%', marginInline: { sm: 0, lg: '10%' } }}>
           <MenuLogoButton>
-            <img src={Logo} alt="logo" />
+            <img src={Logo} alt='logo' />
           </MenuLogoButton>
           <IconButton
-            color="primary"
-            aria-label="open drawer"
-            edge="start"
+            color='primary'
+            aria-label='open drawer'
+            edge='start'
             onClick={handleDrawerToggle}
             sx={{ display: { sm: 'none' }, marginLeft: 'auto' }}
           >
@@ -223,7 +180,7 @@ export default function Navbar({window}) {
             >
               {navItems.map((item) => (
                 <Link
-                  activeClass="active"
+                  activeClass='active'
                   to={`${item.toLocaleLowerCase()}`}
                   spy={true}
                   smooth={true}
@@ -231,22 +188,22 @@ export default function Navbar({window}) {
                   duration={500}
                   key={item}
                 >
-                  <MenuButton underline="none">{item}</MenuButton>
+                  <StyledButton component='p' type='menu' underline='none'>{item}</StyledButton>
                 </Link>
               ))}
-              <ResumeButton underline="none" onClick={handleDownload}>
+              <StyledButton type='resume' underline='none' onClick={handleDownload}>
                 Resume
-              </ResumeButton>
+              </StyledButton>
             </Box>
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="nav">
+      <Box component='nav'>
         <Drawer
           container={container}
-          variant="temporary"
+          variant='temporary'
           open={mobileOpen}
-          anchor="right"
+          anchor='right'
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.

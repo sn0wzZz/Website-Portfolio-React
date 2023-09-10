@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link, useMediaQuery, Typography } from '@mui/material'
+import { Link, useMediaQuery, Typography, css } from '@mui/material'
 import styled from '@emotion/styled'
 import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
@@ -8,13 +8,14 @@ import { Slide } from 'react-reveal'
 import { Box, Container } from '@mui/system'
 import ProjectCard from './ProjectCard'
 import { projects } from '../../data/data'
+import StyledButton from '../../ui/Button'
 
 // title description color gradient technologies linklive linkgit
 
 const MoreButton = styled(Link)(
-  ({ theme }) => `
+  ({ theme }) => css`
     background: transparent;
-    color: #d9d9d9;
+    color: ${theme.palette.primary.main};
     border: none;
     font-weight: bold;
     // margin-inline: 0.7rem;
@@ -22,13 +23,13 @@ const MoreButton = styled(Link)(
     padding: 0.5em 0.7em;
     border-radius: 2em;
     border: 3px solid #fff;
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-bottom: 4rem;
     text-decoration: none;
 
-    &:hover{
-      color: #1f1f1f;
-      background-color: #fff;
+    &:hover {
+      color: ${theme.palette.background.default};
+      background-color: ${theme.palette.primary.main};
       opacity: 0.8;
       transition: color 500ms, background-color 500ms, opacity 500ms;
     }
@@ -79,7 +80,8 @@ export default function ProjectsBox() {
             maxWidth='lg'
             sx={{ display: 'flex', justifyContent: 'center' }}
           >
-            <MoreButton
+            <StyledButton
+            type='git'
               href='https://github.com/sn0wzZz'
               sx={{
                 fontSize: {
@@ -92,7 +94,7 @@ export default function ProjectsBox() {
               target='_blank'
             >
               See more
-            </MoreButton>
+            </StyledButton>
           </Container>
         </Box>
       </Slide>

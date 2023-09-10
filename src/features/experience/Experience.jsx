@@ -14,6 +14,7 @@ const tabbedComponentFonts = {
       xs: '1.5rem',
     },
     fontWeight: 'bold',
+    display: 'block',
   },
   duration: {
     opacity: '.8',
@@ -23,6 +24,7 @@ const tabbedComponentFonts = {
       sm: '1.5rem',
       xs: '1.2rem',
     },
+    display: 'block',
   },
   description: {
     fontSize: {
@@ -31,6 +33,7 @@ const tabbedComponentFonts = {
       sm: '1.5rem',
       xs: '1.5rem',
     },
+    display: 'block',
   },
   bullets: {
     fontSize: {
@@ -39,6 +42,7 @@ const tabbedComponentFonts = {
       sm: '1.2rem',
       xs: '1.2rem',
     },
+    display: 'block',
   },
 }
 
@@ -85,7 +89,6 @@ export default function Experience() {
   const handleChange = (event, newValue) => {
     setValue(newValue)
   }
- const el = useRef()
 
   return (
     <VizSensor
@@ -94,7 +97,7 @@ export default function Experience() {
       minTopValue={10}
       onChange={(isVisible) => setActive(isVisible)}
     >
-      <Slide bottom ref={el}>
+      <Slide bottom>
         <Container
           fixed
           id='experience'
@@ -155,21 +158,36 @@ export default function Experience() {
                 <Tab disableTouchRipple label='Item Three' {...a11yProps(2)} />
               </Tabs>
 
-              <TabPanel component="div" value={value} index={0}>
-
-                <Typography sx={tabbedComponentFonts.title} fontWeight='bold'>
+              <TabPanel value={value} index={0}>
+                <Typography
+                  component={'span'}
+                  sx={tabbedComponentFonts.title}
+                  fontWeight='bold'
+                >
                   Timag, Plovdiv — Designer/Developer{' '}
                 </Typography>
-                <Typography sx={tabbedComponentFonts.duration}>
+                <Typography
+                  component={'span'}
+                  sx={tabbedComponentFonts.duration}
+                >
                   January 2022 - March 2022
                 </Typography>
-                <Typography sx={tabbedComponentFonts.description}>
+                <Typography
+                  component={'span'}
+                  sx={tabbedComponentFonts.description}
+                >
                   Mon Student Practices
                 </Typography>
-                <Typography sx={tabbedComponentFonts.bullets}>
+                <Typography
+                  component={'span'}
+                  sx={tabbedComponentFonts.bullets}
+                >
                   • Design of banners, logos etc.
                 </Typography>
-                <Typography sx={tabbedComponentFonts.bullets}>
+                <Typography
+                  component={'span'}
+                   sx={tabbedComponentFonts.bullets}
+                >
                   • Making websites (HTML,CSS,JavaScript)
                 </Typography>
               </TabPanel>

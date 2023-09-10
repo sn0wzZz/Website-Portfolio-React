@@ -9,8 +9,6 @@ import Experience from './features/experience/Experience'
 import ProjectsBox from './features/projects/ProjectsBox'
 import Contact from './features/contact/Contact'
 import Footer from './ui/Footer'
-import LoadingScreen from './ui/LoadingScreen'
-import { useEffect } from 'react'
 
 export default function App() {
   return (
@@ -31,8 +29,7 @@ export default function App() {
 
 const styles = {
   '*': {
-    transition: 'color 0.3s, background-color 0.3s',
-    transition: 'background-color 0.3s, border 0.3s',
+    transition: ' background-color 0.3s',
   },
   body: {
     background: '#0f0f0f',
