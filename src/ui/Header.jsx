@@ -1,16 +1,16 @@
 import React from 'react'
-import { Box, keyframes} from '@mui/system'
+import { Box, keyframes } from '@mui/system'
 import styled from '@emotion/styled'
 import { Typography, useMediaQuery } from '@mui/material'
 import Grid from '@mui/material/Grid' // Grid version 1
 import LogoBig from '../assets/logoBig.png'
 
 const HeaderBox = styled(Box)`
-max-width: 100%;
-display: flex;
-justify-content: space-evenly;
-margin-block: 10vw;
-max-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-block: 10vw;
+  max-height: 100vh;
 `
 const ContainerBox = styled(Box)`
   max-width: 100%;
@@ -38,6 +38,7 @@ export default function Header() {
   const smallScreen = useMediaQuery('(min-width: 764px)')
   return (
     <HeaderBox
+      component='header'
       paddingTop={!smallScreen ? '1rem' : 0}
       sx={{ paddingTop: { md: 0, sm: 0, xs: '4rem' } }}
     >
@@ -56,7 +57,7 @@ export default function Header() {
                   },
                   lineHeight: { lg: '5rem', xs: '3.5rem' },
                 }}
-                color="white"
+                color='white'
                 fontWeight={'bold'}
               >
                 Hi, I'm Martin Stanchev
@@ -94,10 +95,10 @@ export default function Header() {
                 justifyContent: 'center',
               }}
             >
-              <img src={LogoBig} alt="logo" />
+              <img src={LogoBig} alt='logo' />
               <img
                 src={LogoBig}
-                alt="logo"
+                alt='logo'
                 style={{
                   position: 'absolute',
                   zIndex: -99,
