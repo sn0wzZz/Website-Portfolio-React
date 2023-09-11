@@ -50,12 +50,12 @@ export default function Header() {
                 sx={{
                   fontSize: {
                     xs: '3rem',
-                    sm: '3rem',
+                    sm: '4rem',
                     md: '4rem',
                     lg: '5rem',
                     xl: '5rem',
                   },
-                  lineHeight: { lg: '5rem', xs: '3.5rem' },
+                  lineHeight: { lg: '4.5rem', xs: '3.5rem', sm: '4rem' },
                 }}
                 color='white'
                 fontWeight={'bold'}
@@ -66,7 +66,7 @@ export default function Header() {
                 sx={{
                   fontSize: {
                     xs: '1.5rem',
-                    sm: '1.5rem',
+                    sm: '2rem',
                     md: '2rem',
                     lg: '2rem',
                     xl: '3rem',
@@ -76,7 +76,7 @@ export default function Header() {
                   WebkitTextFillColor: 'transparent',
                   backgroundSize: '150% 150%',
                   animation: `${gradient} 3s linear infinite`,
-                  lineHeight: { lg: '4rem', xs: '2.25rem' },
+                  lineHeight: { lg:'3rem', md: '2rem', xs: '2.25rem' },
                 }}
                 // color="grey"
               >

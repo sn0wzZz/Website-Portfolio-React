@@ -13,7 +13,7 @@ export const headingFontStyle = {
   fontSize: {
     lg: '2.5rem',
     md: '2rem',
-    sm: '1.5rem',
+    sm: '2rem',
     xs: '2rem',
   },
   fontWeight: 'bold',

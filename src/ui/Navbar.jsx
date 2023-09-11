@@ -3,13 +3,13 @@ import { useState } from 'react'
 import { List,ListItem,IconButton,ListItemButton,ListItemText,
           Drawer,CssBaseline,Box,AppBar,Toolbar, css } from '@mui/material'
 import ButtonUnstyled from '@mui/base/ButtonUnstyled'
-import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import styled from '@emotion/styled'
 import { Link } from 'react-scroll'
 import Resume from '../assets/Martin_Stanchev_Resume.pdf'
 import Logo from '../assets/logo.png'
 import StyledButton from './Button'
+import { CgMenuRightAlt } from 'react-icons/cg'
 
 const drawerWidth = 240
 const navItems = ['About', 'Experience', 'Work', 'Contact']
@@ -56,10 +56,10 @@ export default function Navbar({ window }) {
       <IconButton
         sx={{
           float: 'right',
-          color: 'secondary.light',
+          color: 'secondary.dark',
           fontSize: '30px',
           bgcolor: 'rgba(255,255,255,0.7)',
-          margin: '.5rem 1rem 30% 1rem',
+          margin: '.5rem 2.5rem 30% 1rem',
         }}
       >
         <CloseIcon />
@@ -74,7 +74,7 @@ export default function Navbar({ window }) {
               smooth={true}
               offset={-110}
               duration={500}
-              style={{ width: '100%' }}
+              style={{ width: '85%' }}
               onClick={handleDrawerToggle}
             >
               <ListItemButton
@@ -91,9 +91,8 @@ export default function Navbar({ window }) {
                   sx={{
                     bgcolor: 'rgba(255,255,255,0.7)',
                     padding: '.5em',
-                    // marginBlock: 1,
                     borderRadius: 30,
-                    color: 'secondary.light',
+                    color: 'secondary.dark',
                     fontWeight: 'bold',
                   }}
                 />
@@ -101,7 +100,7 @@ export default function Navbar({ window }) {
             </Link>
           </ListItem>
         ))}
-        <ListItem>
+        <ListItem style={{ width: '85%' }}>
           <ListItemButton
             disableTouchRipple
             disableRipple
@@ -159,11 +158,12 @@ export default function Navbar({ window }) {
           <IconButton
             color='primary'
             aria-label='open drawer'
+            disableRipple={true}
             edge='start'
             onClick={handleDrawerToggle}
-            sx={{ display: { sm: 'none' }, marginLeft: 'auto' }}
+            sx={{ display: { sm: 'none' }, marginLeft: 'auto', fontSize: '30px' }}
           >
-            <MenuIcon />
+            <CgMenuRightAlt />
           </IconButton>
           <Box
             sx={{
@@ -188,10 +188,16 @@ export default function Navbar({ window }) {
                   duration={500}
                   key={item}
                 >
-                  <StyledButton component='p' type='menu' underline='none'>{item}</StyledButton>
+                  <StyledButton component='p' type='menu' underline='none'>
+                    {item}
+                  </StyledButton>
                 </Link>
               ))}
-              <StyledButton type='resume' underline='none' onClick={handleDownload}>
+              <StyledButton
+                type='resume'
+                underline='none'
+                onClick={handleDownload}
+              >
                 Resume
               </StyledButton>
             </Box>

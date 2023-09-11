@@ -28,7 +28,7 @@ export default function Technology({ skill, i }) {
                 sm: '3rem',
                 xs: '3rem',
               },
-              filter: `drop-shadow(0px 0px 20px ${color})`,
+              filter: `drop-shadow(0px 0px 15px ${color})`,
             }}
           >
             <Icon
