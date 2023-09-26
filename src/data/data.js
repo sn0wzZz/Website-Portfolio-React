@@ -1,6 +1,8 @@
+import png0 from '../assets/wild-oasis-poster.png'
 import png1 from '../assets/site.png'
-import png2 from '../assets/mapi.png'
-import png3 from '../assets/crud.png'
+import png2 from '../assets/fast-react-pizza.png'
+import png3 from '../assets/mapi.png'
+import png4 from '../assets/crud.png'
 
 import { FaReact } from 'react-icons/fa'
 import { FaNodeJs } from 'react-icons/fa'
@@ -10,6 +12,18 @@ import { DiJqueryLogo } from 'react-icons/di'
 import { IoLogoJavascript } from 'react-icons/io5'
 
 export const projects = [
+  {
+    id: 0,
+    title: 'The Wild Oasis',
+    description:
+      'The main project of React course I recently took. It taught me a lot about various useful development patterns and libraries common in modern applications. The project implements a management system which allows the employees of a resort to add, delete or edit cabins as well as check in or check out guests of the resort.',
+    img: png0,
+    color: '#4f46e5',
+    gradient: '79, 70, 229',
+    technologies: ['React', 'React Query', 'Supabase', 'Recharts'],
+    linkLive: 'https://the-wild-oasis-sn0wzzz.netlify.app/',
+    linkGit: 'https://github.com/sn0wzZz/the-wild-oasis',
+  },
   {
     id: 1,
     title: 'TMDB Application',
@@ -24,10 +38,22 @@ export const projects = [
   },
   {
     id: 2,
+    title: 'Fast React Pizza Co.',
+    description:
+      'An application which allows users to order pizzas from a fictional restaurant. A user can add a number of pizzas to the card and then increase or decrease their quantity. After an order has been made the user can search for it via the provided order number.',
+    img: png2,
+    color: '#b68b06',
+    gradient: '182, 139, 6',
+    technologies: ['React', 'Tailwind', 'Redux'],
+    linkLive: 'https://fast-react-pizza-sn0wzzz.netlify.app/',
+    linkGit: 'https://github.com/sn0wzZz/fast-react-pizza',
+  },
+  {
+    id: 3,
     title: 'Mapi',
     description:
       'A simple mobile application which allows you to save and navigate to GPS coordinates in a database. I built this one for a university course and it taught me a few things about creating native apps.',
-    img: png2,
+    img: png3,
     color: '#1f1f1f',
     gradient: '58, 131, 151',
     technologies: ['React Native', 'SQLite', 'Expo'],
@@ -35,14 +61,14 @@ export const projects = [
     linkGit: 'https://github.com/sn0wzZz/mapi',
   },
   {
-    id: 3,
+    id: 4,
     title: 'GuitarDB',
     description:
       'A CRUD application I built for another course I had at university. It allows you to perform CRUD operations on a guitar database. This one aquainted me with Express and I learned a lot about backend developement.',
-    img: png3,
+    img: png4,
     color: '#0d1a35',
     gradient: '13, 26, 53',
-    technologies: ['Node.js','Express','Axios','MongoDB'],
+    technologies: ['Node.js', 'Express', 'Axios', 'MongoDB'],
     linkLive: '',
     linkGit: 'https://github.com/sn0wzZz/GuitarDB-DAproject',
   },

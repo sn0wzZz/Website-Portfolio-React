@@ -114,8 +114,9 @@ export default function ProjectCard({ projectData }) {
             marginTop: 3,
             borderRadius: smallScreen ? 30 : 7,
             display: 'flex',
-            flexDirection: smallScreen ? 'row' : 'column',
-            alignItems: 'flex-end',
+            flexWrap:  'wrap',
+            // flexDirection: smallScreen ? 'row' : 'column',
+            // alignItems: 'flex-end',
           }}
         >
           <Typography
@@ -151,8 +152,8 @@ export default function ProjectCard({ projectData }) {
           <Box
             sx={{
               float: 'right',
-              marginLeft: smallScreen ? 'auto' : 'none',
-              marginTop: !smallScreen ? '0.5rem' : '',
+              marginLeft: 'auto',
+              marginTop: !smallScreen ? '0.5rem' : '1rem',
             }}
           >
             <IcoBtn
