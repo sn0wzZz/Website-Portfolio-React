@@ -161,7 +161,11 @@ export default function Navbar({ window }) {
             disableRipple={true}
             edge='start'
             onClick={handleDrawerToggle}
-            sx={{ display: { sm: 'none' }, marginLeft: 'auto', fontSize: '30px' }}
+            sx={{
+              display: { sm: 'none' },
+              marginLeft: 'auto',
+              fontSize: '30px',
+            }}
           >
             <CgMenuRightAlt />
           </IconButton>
@@ -211,6 +215,7 @@ export default function Navbar({ window }) {
           open={mobileOpen}
           anchor='right'
           onClose={handleDrawerToggle}
+          BackdropProps={{ invisible: true }}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
