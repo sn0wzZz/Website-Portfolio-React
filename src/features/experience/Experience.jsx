@@ -3,6 +3,7 @@ import { Tab, Tabs, Typography, Box, useMediaQuery, Container } from '@mui/mater
 import PropTypes from 'prop-types'
 import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
+import zIndex from '@mui/material/styles/zIndex'
 
 
 const tabbedComponentFonts = {
@@ -91,6 +92,7 @@ export default function Experience() {
   }
 
   return (
+    <Box sx={{zIndex:'99'}}>
     <VizSensor
       partialVisibility={'bottom'}
       offset={{ top: 10000 }}
@@ -105,7 +107,6 @@ export default function Experience() {
           sx={{
             bgcolor: 'secondary.dark',
             borderRadius: '30px',
-            zIndex: 99999,
           }}
         >
           <Box>
@@ -230,5 +231,6 @@ export default function Experience() {
         </Container>
       </Slide>
     </VizSensor>
+    </Box>
   )
 }

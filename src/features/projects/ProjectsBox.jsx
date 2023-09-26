@@ -21,8 +21,8 @@ export default function ProjectsBox() {
               variant={'h2'}
               color={'primary'}
               sx={{
-                paddingTop: smallScreen ? '7rem' : '3rem',
-                paddingBottom: smallScreen ? '3rem' : '1rem',
+                marginTop: smallScreen ? '7rem' : '3rem',
+                marginBottom: smallScreen ? '3rem' : '1rem',
                 fontWeight: 'bold',
                 fontSize: {
                   lg: '4rem',

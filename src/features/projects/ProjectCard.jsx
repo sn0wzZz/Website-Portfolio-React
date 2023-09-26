@@ -51,7 +51,7 @@ export default function ProjectCard({ projectData }) {
   const [active, setActive] = useState(false)
   return (
     <VizSensor onChange={(isVisible) => setActive(isVisible)}>
-      <Slide bottom>
+    <Slide bottom>
         <Container
           maxWidth='lg'
           sx={{
