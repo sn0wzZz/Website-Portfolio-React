@@ -1,9 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
-import { Link, useMediaQuery, Typography, css } from '@mui/material'
-import styled from '@emotion/styled'
-import VizSensor from 'react-visibility-sensor'
-import { Slide } from 'react-reveal'
+import { useMediaQuery, Typography, css } from '@mui/material'
 
 import { Box, Container } from '@mui/system'
 import ProjectCard from './ProjectCard'
@@ -12,13 +8,9 @@ import StyledButton from '../../ui/Button'
 
 
 export default function ProjectsBox() {
-  const midScreen = useMediaQuery('(min-width:840px)')
   const smallScreen = useMediaQuery('(min-width:540px)')
-  const [active, setActive] = useState(false)
 
   return (
-    <VizSensor onChange={(isVisible) => setActive(isVisible)}>
-      <Slide bottom>
         <Box
           id='work'
           position={'relative'}
@@ -68,7 +60,5 @@ export default function ProjectsBox() {
             </StyledButton>
           </Container>
         </Box>
-      </Slide>
-    </VizSensor>
   )
 }
