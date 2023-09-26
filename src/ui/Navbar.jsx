@@ -59,7 +59,7 @@ export default function Navbar({ window }) {
           color: 'secondary.dark',
           fontSize: '30px',
           bgcolor: 'rgba(255,255,255,0.7)',
-          margin: '.5rem 2.5rem 30% 1rem',
+          margin: '.5rem 1.25rem',
         }}
       >
         <CloseIcon />
@@ -74,7 +74,7 @@ export default function Navbar({ window }) {
               smooth={true}
               offset={-110}
               duration={500}
-              style={{ width: '85%' }}
+              style={{ width: '97.5%' }}
               onClick={handleDrawerToggle}
             >
               <ListItemButton
@@ -100,7 +100,7 @@ export default function Navbar({ window }) {
             </Link>
           </ListItem>
         ))}
-        <ListItem style={{ width: '85%' }}>
+        <ListItem style={{ width: '97.5%' }}>
           <ListItemButton
             disableTouchRipple
             disableRipple
