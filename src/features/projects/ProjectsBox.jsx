@@ -15,7 +15,6 @@ export default function ProjectsBox() {
           id='work'
           position={'relative'}
           bgcolor={'background.default'}
-          zIndex={-2}
         >
           <Container maxWidth='lg'>
             <Typography

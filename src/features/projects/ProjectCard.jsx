@@ -7,7 +7,7 @@ import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
 import { useState } from 'react'
 
-const IcoBtn = styled(IconButton)`
+const IconBtn = styled(IconButton)`
   color: rgba(255, 255, 255, 0.8);
   transition: color 0.3s, border 0.3s;
   :hover {
@@ -56,6 +56,7 @@ export default function ProjectCard({ projectData }) {
           maxWidth='lg'
           sx={{
             display: 'flex',
+            zIndex: 9999,
             justifyContent: midScreen
               ? id % 2
                 ? 'flex-end'
@@ -162,23 +163,23 @@ export default function ProjectCard({ projectData }) {
                   marginTop: !smallScreen ? '0.5rem' : '1rem',
                 }}
               >
-                <IcoBtn
+                <IconBtn
                   href={linkGit}
                   target='_blank'
                   disableRipple
                   disableTouchRipple
                 >
                   <GitHubIcon fontSize='large' />
-                </IcoBtn>
+                </IconBtn>
                 {linkLive && (
-                  <IcoBtn
+                  <IconBtn
                     href={linkLive}
                     target='_blank'
                     disableRipple
                     disableTouchRipple
                   >
                     <LaunchIcon fontSize='large' sx={{ marginLeft: '1rem' }} />
-                  </IcoBtn>
+                  </IconBtn>
                 )}
               </Box>
             </Box>
