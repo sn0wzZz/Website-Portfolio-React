@@ -29,7 +29,7 @@ export default function About() {
             borderRadius: '30px',
             marginBottom: { xs: '2rem', sm: '3rem', md: '4rem', lg: '7rem' },
             padding: { xs: '2rem', sm: '3rem', md: '3rem', lg: '3rem' },
-            zIndex: '-9999999999',
+            zIndex: '999999',
           }}
         >
           <Box color={'primary.white'}>

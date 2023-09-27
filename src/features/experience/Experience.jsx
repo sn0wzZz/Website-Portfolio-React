@@ -95,8 +95,8 @@ export default function Experience() {
   }
 
   return (
-    <Slide bottom>
-      <Container
+    <Slide bottom >
+      <Container 
         fixed
         id='experience'
         maxWidth={'md'}

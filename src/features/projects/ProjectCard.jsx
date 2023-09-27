@@ -55,7 +55,6 @@ export default function ProjectCard({ projectData }) {
           maxWidth='lg'
           sx={{
             display: 'flex',
-            zIndex: 9999,
             justifyContent: midScreen
               ? id % 2
                 ? 'flex-end'
