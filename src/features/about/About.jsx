@@ -1,13 +1,10 @@
-
-import { useState } from 'react'
 import { skills } from '../../data/data'
 
-import VizSensor from 'react-visibility-sensor'
 import Grid2 from '@mui/material/Unstable_Grid2' // Grid version 2
 import { Container, Box, Typography } from '@mui/material'
 import { Slide } from 'react-reveal'
-
 import Technology from './Technology'
+
 
 export const headingFontStyle = {
   fontSize: {
@@ -20,21 +17,14 @@ export const headingFontStyle = {
 }
 
 export default function About() {
-  const [active, setActive] = useState(false)
+  
 
   return (
-    <VizSensor
-      partialVisibility={'bottom'}
-      offset={{ top: 1 }}
-      minTopValue={1}
-      onChange={(isVisible) => setActive(isVisible)}
-    >
       <Slide bottom>
         <Container
           id='about'
           maxWidth={'md'}
           sx={{
-            // bgcolor: 'background.main',
             border: '2px solid white',
             borderRadius: '30px',
             marginBottom: { xs: '2rem', sm: '3rem', md: '4rem', lg: '7rem' },
@@ -79,6 +69,5 @@ export default function About() {
           </Box>
         </Container>
       </Slide>
-    </VizSensor>
   )
 }

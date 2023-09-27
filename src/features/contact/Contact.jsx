@@ -1,21 +1,11 @@
-import { useState } from 'react'
+import { Container, Typography } from '@mui/material'
 
-import { Container, Typography, Link, css } from '@mui/material'
-import styled from '@emotion/styled'
-import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
 import StyledButton from '../../ui/Button'
 
 
 export default function Contact() {
-  const [active, setActive] = useState(false)
   return (
-    <VizSensor
-      partialVisibility={'bottom'}
-      offset={{ top: 10000 }}
-      minTopValue={10}
-      onChange={(isVisible) => setActive(isVisible)}
-    >
       <Slide bottom>
         <Container
           id='contact'
@@ -79,6 +69,5 @@ export default function Contact() {
           >Say hello</StyledButton>
         </Container>
       </Slide>
-    </VizSensor>
   )
 }

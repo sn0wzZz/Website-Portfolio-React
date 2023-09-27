@@ -48,9 +48,8 @@ export default function ProjectCard({ projectData }) {
   } = projectData
   const midScreen = useMediaQuery('(min-width:840px)')
   const smallScreen = useMediaQuery('(min-width:540px)')
-  const [active, setActive] = useState(false)
   return (
-    <VizSensor onChange={(isVisible) => setActive(isVisible)}>
+  
     <Slide bottom>
         <Container
           maxWidth='lg'
@@ -186,6 +185,5 @@ export default function ProjectCard({ projectData }) {
           </Card>
         </Container>
       </Slide>
-    </VizSensor>
   )
 }

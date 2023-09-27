@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { Box, css } from '@mui/material'
 
 const Loader = styled.div(
-  ({ theme }) => `
+  ({ theme }) => css`
 
   width: 8px;
   height: 40px;

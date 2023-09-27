@@ -16,7 +16,7 @@ export const projects = [
     id: 0,
     title: 'The Wild Oasis',
     description:
-      'The main project of a React course I recently took. It taught me a lot about various useful development patterns and libraries common in modern applications. The project implements a management system which allows the employees of a resort to add, delete or edit cabins as well as check in or check out guests of the resort.',
+      'The main project of a React course I recently took. It taught me a lot about various useful development patterns and libraries common in modern applications. The project implements a management system of a resort.',
     img: png0,
     color: '#4f46e5',
     gradient: '79, 70, 229',
@@ -40,7 +40,7 @@ export const projects = [
     id: 2,
     title: 'Fast React Pizza Co.',
     description:
-      'An application which allows users to order pizzas from a fictional restaurant. A user can add a number of pizzas to the card and then increase or decrease their quantity. After an order has been made the user can search for it via the provided order number.',
+      'An application which allows users to order pizzas from a fictional restaurant. A user can add a number of pizzas to the cart and then increase or decrease their quantity. After an order has been made the user can search for it via the provided order number.',
     img: png2,
     color: '#b68b06',
     gradient: '182, 139, 6',

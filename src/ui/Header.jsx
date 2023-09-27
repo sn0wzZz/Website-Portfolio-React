@@ -34,6 +34,29 @@ const gradient = keyframes`
 }
 `
 
+const rotate = keyframes`
+  0% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0, 0, 1, 90deg);
+    transform: rotate3d(0, 0, 1, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  75% {
+    -webkit-transform: rotate3d(0, 0, 1, 270deg);
+    transform: rotate3d(0, 0, 1, 270deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+`
+
 export default function Header() {
   const smallScreen = useMediaQuery('(min-width: 764px)')
   return (
@@ -76,9 +99,8 @@ export default function Header() {
                   WebkitTextFillColor: 'transparent',
                   backgroundSize: '150% 150%',
                   animation: `${gradient} 3s linear infinite`,
-                  lineHeight: { lg:'3rem', md: '2rem', xs: '2.25rem' },
+                  lineHeight: { lg: '3rem', md: '2rem', xs: '2.25rem' },
                 }}
-                // color="grey"
               >
                 UX/UI DESIGNER AND DEVELOPER
               </Typography>
@@ -95,18 +117,22 @@ export default function Header() {
                 justifyContent: 'center',
               }}
             >
-              <img src={LogoBig} alt='logo' />
               <img
                 src={LogoBig}
                 alt='logo'
+              />
+              <div
                 style={{
                   position: 'absolute',
-                  zIndex: -99,
-                  filter: !smallScreen
-                    ? 'blur(5rem) saturate(250%)'
-                    : 'blur(9rem) saturate(250%)',
+                  zIndex: -1,
+                  width: '100%',
+                  height: '100%',
+                  animation: `${rotate} 5s normal linear infinite`,
+                  background:
+                    'linear-gradient( 235deg, #004bbc 40%, #00e4bc 50% )',
+                  filter: smallScreen ? 'blur(8vw)' : 'blur(15vw)',
                 }}
-              />
+              ></div>
             </Box>
           </ContainerBox>
         </Grid>

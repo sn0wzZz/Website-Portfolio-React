@@ -6,7 +6,7 @@ export default function Technology({ skill, i }) {
 
   const Icon = logo
   return (
-    <Grid2 xs={6} sm={6} md={4} lg={3}>
+    <Grid2 xs={4} sm={3} md={2} lg={2}>
       <Card
         variant='outlined'
         component={'div'}
@@ -21,7 +21,8 @@ export default function Technology({ skill, i }) {
             variant='body'
             component='div'
             sx={{
-              
+              paddingTop: '.6rem',
+              // paddingInline: '1rem',
               fontSize: {
                 lg: '3rem',
                 md: '3rem',
