@@ -3,7 +3,6 @@ import {Container, Box, IconButton,Typography, useMediaQuery} from '@mui/materia
 import LaunchIcon from '@mui/icons-material/Launch'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import styled from '@emotion/styled'
-import VizSensor from 'react-visibility-sensor'
 import { Slide } from 'react-reveal'
 import { useState } from 'react'
 
