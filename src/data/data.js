@@ -51,8 +51,7 @@ export const projects = [
   {
     id: 3,
     title: 'Mapi',
-    description:
-      'A simple mobile application which allows you to save and navigate to GPS coordinates in a database. I built this one for a university course and it taught me a few things about creating native apps.',
+    description: `My final project for university. An application which offers the common functionalities of most GPS applications with the addition of social media capabilities.`,
     img: png3,
     color: '#0f2f33',
     gradient: '15, 47, 51',
@@ -72,9 +71,9 @@ export const projects = [
     linkLive: '',
     linkGit: 'https://github.com/sn0wzZz/GuitarDB-DAproject',
   },
-] 
+]
 
-export const skills  = [
+export const skills = [
   {
     technology: 'HTML',
     logo: FaHtml5,
