@@ -54,11 +54,11 @@ export const projects = [
     description:
       'A simple mobile application which allows you to save and navigate to GPS coordinates in a database. I built this one for a university course and it taught me a few things about creating native apps.',
     img: png3,
-    color: '#1f1f1f',
-    gradient: '58, 131, 151',
-    technologies: ['React Native', 'SQLite', 'Expo'],
+    color: '#0f2f33',
+    gradient: '15, 47, 51',
+    technologies: ['Expo', 'SQLite', 'Supabase', 'React Query'],
     linkLive: '',
-    linkGit: 'https://github.com/sn0wzZz/mapi',
+    linkGit: 'https://github.com/sn0wzZz/mapi-plus',
   },
   {
     id: 4,
